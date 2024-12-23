@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { useMainStore } from '/src/store'
 import { BASE_URL, ROUTES, SECURE_ROUTES, PUBLIC_ROUTES, authGuard } from '/config.js'
 
+
 for (const route of SECURE_ROUTES) {
   route.beforeEnter = authGuard
   route.meta = { requiresAuth: true, layout: 'layout-secure' }
@@ -13,6 +14,8 @@ for (const route of PUBLIC_ROUTES) {
 }
 
 const routerHistory = createWebHistory(BASE_URL)
+
+
 
 export const router = createRouter({
   history: routerHistory,

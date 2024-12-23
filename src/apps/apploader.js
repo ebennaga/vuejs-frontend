@@ -1,2 +1,2 @@
-import setup from './web-sample/setup.js'
+import setup from './app-sample/setup.js'
 export default setup
